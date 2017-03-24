@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	Calculate amount of requests from singular ip address on minute level, by using apache2 log.
+#   Calculate amount of requests from singular ip address on minute level, by using apache2 log.
 #   Should be semi-universal, if log row contains IP address and date, and
 #   date is on format "24/Mar/2017:08:38:15".
 #
