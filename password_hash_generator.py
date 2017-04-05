@@ -8,7 +8,7 @@
 import hashlib
 
 programlist = { 'workplace-sql':'sha256',
-				'my-weak-sql':'md5'	}
+		'my-weak-sql':'md5'	}
 
 print("Programs to create password hashsum for")
 for i in programlist:
