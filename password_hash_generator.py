@@ -2,6 +2,13 @@
 #
 #	Template for password hashsum generator.
 #
+#	Idea is to fill 'programlist' -list with programs that are in use, and
+#	link hashsum type, so that it won't be nesessary to remember
+#	hashsum <-> program relation by heart.
+#
+#	As a bonus, this program generates password-hash from
+#	promted password and hashsum related to the program
+#	which is selected.
 #
 #	Author Joel Lappalainen
 
