@@ -29,7 +29,7 @@
 
 
 from sys import argv
-from re import match, compile
+from re import match
 
 def createRegexPattern(argslist):
     pattern = ""
@@ -75,13 +75,12 @@ def listanymatches(file, keywordList, mfiles):
 
 def listallmatches(file, keywordList, mfiles):
     for row in file.readlines():
-        if argslistl(keyword in row for keyword in keywordList):
+        if all(keyword in row for keyword in keywordList):
             print_checker(file, row, mfiles)
     file.close()
 
 
 def listregexmatches(file, pattern, mfiles):
-    pat = compile('%s' % pattern)
     for row in file.readlines():
         if match(pattern,row):
             print_checker(file, row, mfiles)
@@ -122,13 +121,13 @@ def main():
         f = open(file, 'r')
         if listany == 1:
             listanymatches(f, keywordList, mfiles)
-            exit(0)
+
         elif regex == 1:
             listregexmatches(f, regexPattern, mfiles)
-            exit(0)
+
         else:
             listallmatches(f, keywordList, mfiles)
-            exit(0)
+
 
 
 main()
